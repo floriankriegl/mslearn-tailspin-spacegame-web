@@ -5,10 +5,10 @@ parameters:
 
 steps:
   - task: DotNetCoreCLI@2
-    displayName: 'Build the project - ${{ paramters.buildConfiguration }}'
+    displayName: 'Build the project - ${{ parameters.buildConfiguration }}'
     inputs:
         command: 'build'
-        arguments: '--no-restore --configuration ${{ paramters.buildCnfigruation }}'
+        arguments: '--no-restore --configuration ${{ parameters.buildCnfigruation }}'
         projects: '**/*.csproj'
 
   - task: DotNetCoreCLI@2
